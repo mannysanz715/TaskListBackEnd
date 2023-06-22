@@ -4,13 +4,14 @@ const Schema = mongoose.Schema
 
 const taskSchema = new Schema({
   taskName: String,
+  user: { type: Schema.Types.ObjectId, ref: 'Profile' },
   taskDescription : String,
   timeToComplete : Number,
-  date : Date,
+  unitOfTime : String,
 },{
   timestamps: true,
 })
 
-const Task = mongoose.model('Task', profileSchema)
+const Task = mongoose.model('Task', taskSchema)
 
-export { Profile }
+export { Task }

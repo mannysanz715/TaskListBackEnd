@@ -10,4 +10,4 @@ const dailyTasksSchema = new Schema({
 
 const DailyTasks = mongoose.model('DailyTasks', profileSchema)
 
-export { Profile }
+export { DailyTasks }
